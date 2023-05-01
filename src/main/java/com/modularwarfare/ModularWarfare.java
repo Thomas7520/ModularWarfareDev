@@ -469,14 +469,14 @@ public class ModularWarfare {
          * Load the addon from the gradle project compilation (.class folder) instead of final .jar
          * in order to allow HotSwap changes
          */
-        if(ModUtil.isIDE()) {
+        /*if(ModUtil.isIDE()) {
             File file = new File(ModUtil.getGameFolder()).getParentFile().getParentFile();
             String folder = file.toString().replace("\\", "/");
             File meleeBuild = new File(folder + "/melee-addon/build/classes/java/main");
             if (meleeBuild.exists()) {
                 this.loaderManager.constructDevAddons(new File(folder + "/melee-addon/build/classes/java/main"), "com.modularwarfare.melee.ModularWarfareMelee", event.getSide());
             }
-        }
+        }*/
 
         PROXY.construction(event);
     }
